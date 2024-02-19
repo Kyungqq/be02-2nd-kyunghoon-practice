@@ -17,7 +17,7 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.REMOTE_PORT }}
-        script:
+        script: |
           sudo rm -rf ./devops
           sudo git clone https://github.com/Kyungqq/be02-2nd-kyunghoon-practice.git
-         sudo mv -f ./study.html /var/www/html
+          sudo mv -f ./be02-2nd-kyunghoon-practice/*.html /var/www/html
