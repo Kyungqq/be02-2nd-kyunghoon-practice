@@ -18,6 +18,6 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.REMOTE_PORT }}
         script: |
-          sudo rm -rf ./devops
+          sudo rm -rf ./be02-2nd-kyunghoon-practice
           sudo git clone https://github.com/Kyungqq/be02-2nd-kyunghoon-practice.git
           sudo mv -f ./be02-2nd-kyunghoon-practice/*.html /var/www/html
