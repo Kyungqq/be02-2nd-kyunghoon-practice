@@ -13,5 +13,5 @@
         state: started
     - name: Copy HTML files
       copy:
-        src: /study.html  # HTML 파일이 위치한 경로
+        src: ./be02-2nd-kyunghoon-practice/*.html  # HTML 파일이 위치한 경로
         dest: /var/www/html/
