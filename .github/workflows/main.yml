@@ -1,23 +1,23 @@
-# name: devops test
+name: devops test
 
-# on:
-#   push:
-#     branches: [ feature-han ]
+on:
+  push:
+    branches: [ feature-han ]
     
-# jobs:
-#   deploy:
-#     name: Deploy to EC2
-#     runs-on: ubuntu-latest
+jobs:
+  deploy:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest
 
-#     steps:
-#     - name: get code from github
-#       uses: appleboy/ssh-action@v0.1.9
-#       with:
-#         host: ${{ secrets.REMOTE_HOST }}
-#         username: ${{ secrets.REMOTE_USER }}
-#         key: ${{ secrets.KEY }}
-#         port: ${{ secrets.REMOTE_PORT }}
-#         script: |
-#           sudo rm -rf ./be02-2nd-kyunghoon-practice
-#           sudo git clone https://github.com/Kyungqq/be02-2nd-kyunghoon-practice.git
-#           sudo mv -f ./be02-2nd-kyunghoon-practice/*.html /var/www/html
+    steps:
+    - name: get code from github
+      uses: appleboy/ssh-action@v0.1.9
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.REMOTE_PORT }}
+        script: |
+          sudo rm -rf ./be02-2nd-kyunghoon-practice
+          sudo git clone https://github.com/Kyungqq/be02-2nd-kyunghoon-practice.git
+          sudo mv -f ./be02-2nd-kyunghoon-practice/*.html /var/www/html
