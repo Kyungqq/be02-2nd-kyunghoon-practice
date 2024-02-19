@@ -2,7 +2,7 @@ name: devops test
 
 on:
   push:
-    branches: [ main ]
+    branches: [ feature-han ]
     
 jobs:
   deploy:
