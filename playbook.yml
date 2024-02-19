@@ -1,0 +1,17 @@
+---
+- name: Install Nginx and deploy HTML
+  hosts: ec2
+  become: yes
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
+    - name: Copy HTML files
+      copy:
+        src: /path/to/html/files/*   # HTML 파일이 위치한 경로
+        dest: /var/www/html/
